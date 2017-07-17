@@ -88,6 +88,9 @@ windower.register_event('prerender', function()
                 elseif member.distance > 40 then
                     text:bg_visible(true)
                     text:color(255, 255, 255)
+                    if member.distance == 52.97 then
+                        member.distance = '---'
+                    end
                 else
                     text:bg_visible(false)
                     text:color(255, 255, 255)
@@ -96,6 +99,7 @@ windower.register_event('prerender', function()
                 text:update(member)
                 text:show()
             else
+                text:bg_visible(false)
                 text:hide()
             end
         end
